@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 import seaborn as sns
 
 
-df = pd.read_csv(![](leetcode_contest_dataset.csv))
+df = pd.read_csv("leetcode_contest_dataset.csv")
 
 
 # HEADINGS
