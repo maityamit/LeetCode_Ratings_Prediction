@@ -10,8 +10,7 @@ from sklearn.model_selection import train_test_split
 import seaborn as sns
 
 
-df = pd.read_csv("leetcode_contest_dataset.csv")
-
+df = pd.read_csv(r'C:\Users\AMIT\Downloads\leetcode_contest_dataset.csv')
 
 # HEADINGS
 st.title('LeetCode Rank Predictor')
@@ -23,7 +22,7 @@ st.sidebar.header('User Given Data')
 # X AND Y DATA
 x = df.drop(['final'], axis = 1)
 y = df.iloc[:, -1]
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 1, random_state = 0)
 
 # FUNCTION
 def user_report():
@@ -44,7 +43,7 @@ def user_report():
 
 
 
-# PATIENT DATA
+# User DATA
 user_data = user_report()
 st.subheader('User Data')
 st.write(user_data)
